@@ -20,9 +20,9 @@ class Home extends CI_Controller {
             $this->load->model('user_model');
             $user_id = $_SESSION['user_id'];
             $user = $this->user_model->get_user($user_id);
-            $level = $user->level;
+            $level = $user[0]->level;
             if($level == 0){
-            $this->load->view('firstque');
+            $this->load->view('firstquestion');
             }
             else 
                 $this->load->view('login_view');
@@ -51,7 +51,7 @@ class Home extends CI_Controller {
            // echo json_encode($data);
         //}
         $this->user_model->insert($input_data);
-        $sql = base_url('/home');
+        $sql = base_url('home');
         redirect($sql);
     }
     
@@ -76,6 +76,10 @@ class Home extends CI_Controller {
     public function logout(){
         session_destroy();
         $this->load->view('login_view');
+        
+    }
+    
+    public function user_response() {
         
     }
 }
