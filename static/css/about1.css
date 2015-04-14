@@ -1,0 +1,67 @@
+body
+{
+	margin-top: -20px;
+	background-color:#eee;
+	word-wrap: break-word;
+}
+.datab
+{
+	color: #3e9cca;
+	font-weight: bold;
+	font-family: "Arial", Georgia, Serif;
+}
+.datab:hover, .datab:active,.datab:visited,.datab:link
+{
+	color: #fff;
+	font-weight: bold;
+	font-family: "Arial", Georgia, Serif;
+	text-decoration:none;
+}
+.aboutcolor
+{
+	background-color:#3e9cca;
+}
+
+.database
+{
+	background-color:#272727;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}
+.written
+{
+	color:#fff;
+}
+.box_style_3 
+{
+	position: relative;
+	margin: 0 0 2em 0;
+	text-align: center;
+	background: #fff;
+	padding: 30px 30px 10px 30px;
+	border: 1px solid #ededed;
+}
+
+.social_team {
+list-style: none;
+padding: 0;
+margin: 5px 0 5px 0;
+font-size: 16px;
+}
+ul.social_team li {
+display: inline-block;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+border: 1px solid #ededed;
+width: 30px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+.row
+{
+	margin-left:0;
+	margin-right:0;
+}

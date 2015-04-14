@@ -27,5 +27,27 @@ class User_model extends CI_Model {
     
     public function insert($data){
         $query = $this->db->insert('users' ,$data);
+        return TRUE;
+    }
+    
+    public function update_level($level,$user_id){
+        //$new_level = $level
+        $sql = "update users set level = '$level'+1 where id = '$user_id' ";
+        $this->db->query($sql);
+    }
+    
+    function update($user_id, $new_password) {
+        $pwd_changed = "UPDATE users SET password= '$new_password' WHERE id='$user_id'";
+        $this->db->query("$pwd_changed");
+    }
+    
+    public function verify_password($user_id, $current_password) {
+        $sql = "SELECT * from users where id='$user_id' and password='$current_password' ";
+        $query = $this->db->query("$sql");
+        if ($query->num_rows() == 0)
+            return false;
+        else
+            return true;
     }
 }
+?>

@@ -3,9 +3,8 @@
 <head>
 <title>NIT_Student</title>
 <link rel="stylesheet" href="<?php echo base_url('../static/css/home.css'); ?>" type="text/css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url('../static/css/bootstrap.min.css');?>">
+<script src="<?php echo base_url('../static/js/bootstrap.min.js'); ?>"></script>
 <style>
 #alt-1{
 			-o-animation-name: color_change;
@@ -175,7 +174,7 @@
 <div class="container">
 <div class="row">
 <div class="login">
- <form action="<?php echo base_url('/home/login_submit'); ?>" id="form" method="POST">
+ <form id="login_form" method="POST">
     Email id :&nbsp; <input type="text" name="email">
     Password :&nbsp; <input type="password" name="password">
     <input type="submit" value="Login">
@@ -201,16 +200,10 @@
                     </div>
                 </ul>
                 </div>
-		<div class="row advice">
-                    <center>
-			<span class="register-text">Get yourself registered as soon as possible</span><br/>
-			<span class="register-txt">All the best :D</span><br/>
-                    </center>
-		</div>
     </div>
 	<div class="col-xs-12 col-sm-6" id="registration">
             <div class="panel-transparent">
-		<form action="<?php echo base_url('/home/register_submit'); ?>" method="post" name="registration">
+		<form id="register_form" method="post" name="registration">
                     <span class="row form-title">Register yourself now</span>
                     <div class="form-cont">
                         <div class="row form-group">
@@ -260,15 +253,6 @@
                                     </div>
                         </div>
                         <div class="row form-group">
-                        <label class="col-xs-4 form-label">Confirm Password</label>
-                            <div class="col-xs-8 col-md-6 col-lg-6">
-                                <span class="input-icon">
-				<input type="password" class="form-input form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm password" required/>
-                                <i class="fa fa-lock"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="row form-group">
                             <div class="col-xs-6" style="font-size: 16px;margin-top:10px;color:white;">
 				<input type="checkbox" name="terms" required checked disabled/>&nbsp;I accept the <a target="_blank" href="terms.php">terms and conditions</a>.
                             </div>
@@ -282,5 +266,17 @@
 	</div>
     </div>
 </div>
+    <script  src="<?php echo base_url('../static/js/jquery.js'); ?>" ></script>
+    <script src="<?php echo base_url('../static/js/jquery.validate.min.js'); ?>" > </script>
+    <script src="<?php echo base_url('../static/js/bootstrap.min.js'); ?>" ></script>
+    
+    <script>
+        var register_submit_url = "<?php echo base_url('home/register_submit'); ?>";
+        var login_submit_url = "<?php echo base_url('home/login_submit'); ?>";
+        var login_url = "<?php echo base_url('home'); ?>";
+        var home_url = "<?php echo base_url('home'); ?>";
+    </script>
+    <script src="<?php echo base_url('../static/js/login.js');?>"></script>
+    <script src =" <?php echo base_url('../static/js/register.js'); ?>"></script>
 </body>
 </html>
